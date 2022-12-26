@@ -31,6 +31,7 @@ behave_steps()
         sudo mkdir -p /var/lib/jenkins/workspace/trybehave/features/steps
         sudo cp -r ./test.feature /var/lib/jenkins/workspace/trybehave/features
         sudo cp -r ./test.py /var/lib/jenkins/workspace/trybehave/features/steps
+        cd /var/lib/jenkins/workspace/trybehave
         behave
         
 }
