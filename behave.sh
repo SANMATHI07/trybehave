@@ -19,7 +19,7 @@ behave_install()
 cleanup_workspace()
 {
        echo "removing old behave files"
-       sudo rm -r /var/lib/jenkins/workspace/testbehave
+       sudo rm -r /var/lib/jenkins/workspace/trybehave
        if [ $? -ne 0 ]; then
                 echo "error while removing behave files"
        fi
