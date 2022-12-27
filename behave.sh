@@ -32,7 +32,6 @@ behave_steps()
         sudo cp -r ./test.feature /var/lib/jenkins/workspace/testbehave/features
         sudo cp -r ./test.py /var/lib/jenkins/workspace/testbehave/features/steps
         cd /var/lib/jenkins/workspace/testbehave
-        behave
               
 }
 python_install
