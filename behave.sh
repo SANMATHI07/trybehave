@@ -18,12 +18,12 @@ behave_install()
 }
 cleanup_workspace()
 {
-       echo "removing old behave files"
-       sudo rm -r /var/lib/jenkins/workspace/behind
-       if [ $? -ne 0 ]; then
-                echo "error while removing behave files"
-       fi
-       echo "behave files removed successfully"
+echo "removing old behave files"
+sudo rm -r /var/lib/jenkins/workspace/behind/features
+if [ $? -ne 0 ]; then
+echo " error while removing"
+fi
+echo "behave files removed successfulyy"
 }
 behave_steps()
 {
