@@ -29,8 +29,10 @@ behave_steps()
 {
         echo "steps to run BDD"
         sudo mkdir -p /var/lib/jenkins/workspace/newbehave/features/steps
-        sudo cp -r ./test.py /var/lib/jenkins/workspace/newbehave/features
-        
+        sudo cp -r ./test.feature /var/lib/jenkins/workspace/newbehave/features
+        sudo cp -r ./test.py /var/lib/jenkins/workspace/newbehave/features/steps
+        cd /var/lib/jenkins/workspace/newbehave
+        behave
               
 }
 python_install
