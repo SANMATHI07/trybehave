@@ -19,7 +19,7 @@ behave_install()
 cleanup_workspace()
 {
        echo "removing old behave files"
-       sudo rm -r /var/lib/jenkins/workspace/behavefile
+       sudo rm -r /var/lib/jenkins/workspace/newbehave
        if [ $? -ne 0 ]; then
                 echo "error while removing behave files"
        fi
@@ -28,10 +28,10 @@ cleanup_workspace()
 behave_steps()
 {
         echo "steps to run BDD"
-        sudo mkdir -p /var/lib/jenkins/workspace/behavefile/features/steps
-        sudo cp -r ./test.feature /var/lib/jenkins/workspace/behavefile/features
-        sudo cp -r ./test.py /var/lib/jenkins/workspace/behavefile/features/steps
-        cd /var/lib/jenkins/workspace/behavefile
+        sudo mkdir -p /var/lib/jenkins/workspace/newbehave/features/steps
+        sudo cp -r ./test.feature /var/lib/jenkins/workspace/newbehave/features
+        sudo cp -r ./test.py /var/lib/jenkins/workspace/newbehave/features/steps
+        cd /var/lib/jenkins/workspace/newbehave
         behave      
 }
 python_install
